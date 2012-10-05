@@ -5,7 +5,8 @@
  * To change this template use File | Settings | File Templates.
  */
 
-var assert = require("assert");
+var assert = require("assert"),
+	fs = require('fs'),
 	SubDb = require("../lib/subdb.js");
 
 describe('Subdb', function() {
@@ -65,6 +66,26 @@ describe('Subdb', function() {
 
 					assert.equal(res.join(','), ["en","fr","it","pt"].join(','));
 					done();
+				});
+			});
+		});
+
+
+		describe('#download_subtitle', function(){
+			it('should download subtitle', function(done) {
+				var path = process.cwd()+'/test/justified.srt';
+				fs.unlink(path, function() {
+					var subdb = new SubDb();
+					subdb.api.download_subtitle('edc1981d6459c6111fe36205b4aff6c2', 'fr', path, function(err, res){
+						if(err) return done(err);
+
+						fs.stat(res, function(err, stat) {
+							if(err) return done(err);
+
+							assert.equal(stat.size, 181);
+							done();
+						});
+					});
 				});
 			});
 		});
