@@ -1,0 +1,31 @@
+{
+  "author": "ka2er <personseb+npm@gmail.com>",
+  "name": "subdb",
+  "description": "API to interact with subdb services",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ka2er/node-subdb-api.git"
+  },
+  "bugs": {
+	"url" : "http://github.com/ka2er/node-subdb-api/issues"
+  },
+  "scripts": {
+    "test": "mocha"
+  },  "main": "lib/subdb.js",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "mocha":"1.6.0"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "keywords": [
+    "subdb",
+    "imdb"
+  ],
+  "license": "GPL"
+}
