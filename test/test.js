@@ -52,7 +52,7 @@ describe('Subdb', function() {
 				subdb.api.available_languages(function(err, res){
 					if(err) return done(err);
 
-					assert.equal(res.join(','), ["af","cs","da","de","en","es","fi","fr","hu","id","it","la","nl","no","oc","pl","pt","ro","ru","sl","sr","sv","tr"].join(','));
+					assert.equal(res.join(','), ["en","es","fr","it","nl","pl","pt","ro","sv","tr"].join(','));
 					done();
 				});
 			});
@@ -86,6 +86,19 @@ describe('Subdb', function() {
 							done();
 						});
 					});
+				});
+			});
+		});
+
+		describe('#upload_subtitle', function(){
+			it('should upload subtitle', function(done) {
+				var path = process.cwd()+'/test/justified.srt';
+				var subdb = new SubDb();
+				subdb.api.upload_subtitle('edc1981d6459c6111fe36205b4aff6c2', path, function(err, res){
+					if(err) return done(err);
+
+					assert.equal(res, 200);
+					done();
 				});
 			});
 		});

@@ -12,12 +12,13 @@
   },
   "scripts": {
     "test": "mocha"
-  },  "main": "lib/subdb.js",
+  },"main": "lib/subdb.js",
   "dependencies": {
-
+	"form-data": "0.0.x",
+	"clone": "0.1.x"
   },
   "devDependencies": {
-    "mocha":"1.6.0"
+    "mocha":"1.6.x"
   },
   "optionalDependencies": {},
   "engines": {
