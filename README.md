@@ -10,9 +10,11 @@ Usage
 - All api methods are available through subdb.api attributes (see http://thesubdb.com/api/ for methods and arguments).
 - A hash method helper is also available
 
-	subdb.computeHash(path_to_movie, callback);
+```node
+subdb.computeHash(path_to_movie, callback);
+```
 
-
+```node
 For searching a sub file
 
 	SubDb = require("subdb");
@@ -34,7 +36,7 @@ For searching a sub file
 
 		});
 	});
-
+```
 For uploading a sub file
 
 	SubDb = require("subdb");
