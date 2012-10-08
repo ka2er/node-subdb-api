@@ -7,6 +7,12 @@ Node.js API library to query thesubdb.com
 Usage
 -----
 
+- All api methods are available through subdb.api attributes (see http://thesubdb.com/api/ for methods and arguments).
+- A hash method helper is also available
+
+	subdb.computeHash(path_to_movie, callback);
+
+
 For searching a sub file
 
 	SubDb = require("subdb");
@@ -29,7 +35,7 @@ For searching a sub file
 		});
 	});
 
-for uploading a sub file
+For uploading a sub file
 
 	SubDb = require("subdb");
 
@@ -40,7 +46,3 @@ for uploading a sub file
 		// sub subfile is normally uploaded to thesubdb.com servers
 	});
 
-About
------
-
-API doc is here : http://thesubdb.com/api/
