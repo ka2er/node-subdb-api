@@ -64,7 +64,7 @@ describe('Subdb', function() {
 				subdb.api.search_subtitles('edc1981d6459c6111fe36205b4aff6c2', function(err, res){
 					if(err) return done(err);
 
-					assert.equal(res.join(','), ["en","fr","it","pt"].join(','));
+					assert.equal(res.join(','), ["en","es","fr","it","pt"].join(','));
 					done();
 				});
 			});
@@ -82,8 +82,9 @@ describe('Subdb', function() {
 						fs.stat(res, function(err, stat) {
 							if(err) return done(err);
 
-							assert.equal(stat.size, 181);
-							done();
+                            assert.equal(stat.size, 179);
+
+                            done();
 						});
 					});
 				});
