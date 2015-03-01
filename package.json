@@ -2,23 +2,24 @@
   "author": "ka2er <personseb+npm@gmail.com>",
   "name": "subdb",
   "description": "API to interact with subdb services",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/ka2er/node-subdb-api.git"
   },
   "bugs": {
-	"url" : "http://github.com/ka2er/node-subdb-api/issues"
+    "url": "http://github.com/ka2er/node-subdb-api/issues"
   },
   "scripts": {
     "test": "mocha"
-  },"main": "lib/subdb.js",
+  },
+  "main": "lib/subdb.js",
   "dependencies": {
-	"form-data": "0.0.x",
-	"clone": "0.1.x"
+    "form-data": "0.0.x",
+    "clone": "0.1.x"
   },
   "devDependencies": {
-    "mocha":"1.6.x"
+    "mocha": "1.6.x"
   },
   "optionalDependencies": {},
   "engines": {
