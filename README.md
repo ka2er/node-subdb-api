@@ -49,3 +49,4 @@ subdb.api.upload_subtitle(hash, subfile, function(err, res){
 	// sub subfile is normally uploaded to thesubdb.com servers
 });
 ```
+
