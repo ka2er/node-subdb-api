@@ -73,19 +73,26 @@ describe('Subdb', function() {
 
 		describe('#download_subtitle', function(){
 			it('should download subtitle', function(done) {
-				var path = process.cwd()+'/test/justified.srt';
+				var path = process.cwd()+'/test/justified.srt',
+					properlyEncoded = process.cwd() + '/test/justified-FR-ANSI.srt'
+				;
+
+				var bufferExpectedFile = fs.readFileSync(properlyEncoded);
+
 				fs.unlink(path, function() {
 					var subdb = new SubDb();
 					subdb.api.download_subtitle('edc1981d6459c6111fe36205b4aff6c2', 'fr', path, function(err, res){
 						if(err) return done(err);
 
-						fs.stat(res, function(err, stat) {
-							if(err) return done(err);
+						var bufferActualFile = fs.readFileSync(path);
 
-                            assert.equal(stat.size, 179);
+						assert.equal(bufferActualFile.length, bufferExpectedFile.length);
 
-                            done();
-						});
+						for(var i = 0; i < bufferActualFile.length; i++){
+							assert.equal(bufferActualFile[i], bufferExpectedFile[i]);
+						}
+
+						done();
 					});
 				});
 			});

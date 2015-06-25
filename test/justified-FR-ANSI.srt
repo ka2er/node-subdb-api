@@ -1,0 +1,9 @@
+1
+00:00:05,000 --> 00:00:15,000
+Attention: Ceci est une légende de test.
+
+2
+00:00:25,000 --> 00:00:40,000
+SubDB - une base de données libre de sous-titres.
+http://thesubdb.com
+
